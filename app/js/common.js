@@ -243,6 +243,60 @@ function startProductGroup() {
 startProductGroup();
 
 
+let newsGroup = [...document.querySelectorAll('.news-section__cont')];
+
+function startNewsGroup() {
+    if (!newsGroup.length) {
+
+    } else {
+
+
+        newsGroup.forEach((sld) => {
+            let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                speed: 600,
+                centeredSlides: false,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: false,
+                spaceBetween: 23,
+                breakpoints: {
+                    1050: {
+                        slidesPerView: 4,
+                        spaceBetween: 32,
+                    },
+                    850: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    650: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                }
+
+
+
+            });
+
+
+        })
+
+    }
+}
+
+startNewsGroup();
+
+
 //modal windows
 
 //modal window
@@ -260,33 +314,36 @@ function controlModal() {
 
             btn.addEventListener('click', (e) => {
 
-                e.preventDefault();
-                e.stopPropagation();
+                if (window.innerWidth > 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
 
-                burger.forEach((br) => {
-                    br.classList.remove('active');
-                });
-                header.classList.remove('active');
+                    burger.forEach((br) => {
+                        br.classList.remove('active');
+                    });
+                    header.classList.remove('active');
 
-                if (document.querySelector('.modal-window.visible')) {
-                    document.querySelector('.modal-window.visible').classList.remove('visible');
-                }
-                modals.forEach((mod) => {
-                    if (mod.dataset.modal === data) {
-                        document.body.classList.add('no-scroll');
-
-                        mod.classList.add('visible');
-                        if (mod.querySelector('.main-title')) {
-                            setTimeout(() => {
-                                mod.querySelector('.main-title').classList.add('done');
-
-                            }, 500);
-                        }
-                        if (mod.classList.contains('modal-video')) {
-                            mod.querySelector('iframe').src = btn.dataset.link;
-                        }
+                    if (document.querySelector('.modal-window.visible')) {
+                        document.querySelector('.modal-window.visible').classList.remove('visible');
                     }
-                })
+                    modals.forEach((mod) => {
+                        if (mod.dataset.modal === data) {
+                            document.body.classList.add('no-scroll');
+
+                            mod.classList.add('visible');
+                            if (mod.querySelector('.main-title')) {
+                                setTimeout(() => {
+                                    mod.querySelector('.main-title').classList.add('done');
+
+                                }, 500);
+                            }
+                            if (mod.classList.contains('modal-video')) {
+                                mod.querySelector('iframe').src = btn.dataset.link;
+                            }
+                        }
+                    })
+                }
+
             })
         });
         closeModal.forEach((btn) => {
