@@ -296,6 +296,56 @@ function startNewsGroup() {
 
 startNewsGroup();
 
+let productGallery = [...document.querySelectorAll('.product-gallery')];
+
+function startGallery() {
+    if (!productGallery.length) {
+
+    } else {
+
+
+        productGallery.forEach((sld) => {
+            let sldCont = sld.querySelector('.swiper');
+            let sldNext = sld.querySelector('.slider-btn--next');
+            let sldPrev = sld.querySelector('.slider-btn--prev');
+            let pagin = sld.querySelector('.dots');
+
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                speed: 600,
+                centeredSlides: false,
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                autoplay: false,
+                spaceBetween: 23,
+
+                pagination: {
+                    el: pagin,
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 2,
+                },
+
+
+
+            });
+
+
+        })
+
+    }
+}
+
+startGallery();
 
 //modal windows
 
@@ -393,6 +443,168 @@ function controlModal() {
 controlModal();
 
 //modal windows
+
+//rating control
+
+let quantButton = [...document.querySelectorAll('.product-amount .quantity__button')];
+
+function upValueQuant() {
+    if (!quantButton.length) {
+
+    } else {
+        quantButton.forEach((btn) => {
+            btn.querySelector('button').addEventListener('click', () => {
+                if (btn.classList.contains('quantity__button--minus')) {
+                    let val =  btn.closest('.quantity-field').querySelector('.quantity input').value;
+                    if (Number(val) === 0) {
+
+                    } else {
+                        let newVal =    Number(val) - 1;
+                        btn.closest('.quantity-field').querySelector('.quantity input').value = newVal;
+                    }
+
+
+                } else {
+                    let val =  btn.closest('.quantity-field').querySelector('.quantity input').value;
+
+                    let newVal =    Number(val) + 1;
+                    btn.closest('.quantity-field').querySelector('.quantity input').value = newVal;
+
+                }
+            })
+        })
+    }
+}
+upValueQuant();
+
+
+function getRaty() {
+    $('.rating-stars').each(function( index ) {
+        if($(this).html() == '') {
+            $(this).raty({
+                readOnly: true,
+                starHalf: './img/star-full.svg',
+                starOn: './img/star-full.svg',
+                starOff: './img/star-clear.svg',
+                hints: ['a', null, '', null, '', null]
+            });
+        }
+    });
+}
+
+getRaty();
+
+
+let startsRateModal = [...document.querySelectorAll('.rate .sg-rate')];
+
+function hoverStarsRate(startsRateModal) {
+    if (!startsRateModal.length) {
+
+    } else {
+        startsRateModal.forEach((st, k) => {
+            let number = k + 1;
+            st.addEventListener('mouseover', () => {
+                st.classList.add('hover');
+                for (let i = 0; i < k; i++) {
+                    startsRateModal[i].classList.add('hover');
+                }
+            });
+            st.addEventListener('mouseout', () => {
+                st.classList.remove('hover');
+                for (let i = 0; i < k; i++) {
+                    startsRateModal[i].classList.remove('hover');
+                }
+            });
+            st.addEventListener('click', () => {
+                startsRateModal.forEach((st2) => {
+                    st2.classList.remove('clicked');
+                });
+                st.classList.add('clicked');
+                st.closest('.form-comment').querySelector('.rating-input input').value = number;
+                for (let i = 0; i < k; i++) {
+                    startsRateModal[i].classList.add('clicked');
+                }
+            })
+        })
+    }
+}
+
+
+hoverStarsRate(startsRateModal);
+
+
+//rating control
+
+//product-description
+
+let prodDesc = [...document.querySelectorAll('.product-description')];
+
+function controlProdDesc() {
+    if (prodDesc.length) {
+        prodDesc.forEach((btn) => {
+            btn.querySelector('.opener').addEventListener('click', () => {
+                btn.classList.toggle('open');
+            })
+        })
+    }
+}
+controlProdDesc();
+//product-description
+
+//tabs
+
+let tabBtn = [...document.querySelectorAll('.tab-btn')];
+
+function changeTab() {
+    if (!tabBtn.length) {
+
+    } else {
+        tabBtn.forEach((btn, k) => {
+            btn.addEventListener('click', () => {
+                if (btn.classList.contains('active')) {
+
+                } else {
+                    tabBtn.forEach((btn2) => {
+                        btn2.classList.remove('active');
+                    });
+                    btn.classList.add('active');
+                    [...btn.closest('.tab-cont').querySelectorAll('.item-tab')].forEach((tab, m) => {
+                        if (m === k) {
+                            tab.classList.add('active');
+                        } else {
+                            tab.classList.remove('active');
+
+                        }
+                    })
+                }
+            })
+        })
+    }
+}
+
+changeTab();
+
+//tabs
+
+
+//faq
+let faqItems = [...document.querySelectorAll('.single-faq .faq-head')];
+
+function controlFaq() {
+    if (faqItems.length) {
+        faqItems.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                btn.closest('.single-faq').classList.toggle('open');
+            })
+        })
+    }
+}
+
+controlFaq();
+
+//faq
 
 
 
