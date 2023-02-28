@@ -484,6 +484,43 @@
   .header-info {
     display: none;
   }
+  .cart-modal-item .img {
+    width: 124px;
+    height: 124px;
+    margin-right: 21px;
+  }
+  .cart-modal-item {
+    margin-bottom: 40px;
+    .quantity-field {
+      margin-top: 20px;
+      margin-bottom: 49px;
+    }
+    .text {
+      p {
+        font-size: 16px;
+        line-height: 130%;
+        margin-bottom: 7px;
+        small {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 130%;
+          color: #828A92;
+        }
+      }
+      span {
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 0;
+      }
+    }
+  }
+  .cart-modal-links {
+    margin-top: 30px;
+  }
+  .callback-mobile .modal-cont {
+    padding: 45px 34px;
+  }
 }
 
 

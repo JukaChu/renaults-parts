@@ -446,7 +446,7 @@ controlModal();
 
 //rating control
 
-let quantButton = [...document.querySelectorAll('.product-amount .quantity__button')];
+let quantButton = [...document.querySelectorAll('.quantity__button')];
 
 function upValueQuant() {
     if (!quantButton.length) {
