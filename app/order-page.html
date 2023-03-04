@@ -18,120 +18,93 @@
 
     <section class="checkout-page">
         <div class="container">
-            <a href="" class="get-back">Повернутись до покупок</a>
+            <a href="" class="get-back">Повернутись до кошику</a>
 
-            <p class="title">Кошик</p>
+            <p class="title">Оформити замовлення</p>
 
-            <div class="checkout-list">
-                <div class="checkout-item">
+            <form action="">
+
+                <div class="checkout-info">
                     <div class="left">
-                        <div class="img">
-                            <a href="">
-                                <img src="./img/prod-1.png" alt="">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <a href="">Масло моторне ELF 5W-40 Evolution 900 NF 4л ELF0069</a>
-                            <p class="sg-p" data-price="1900"><strong>1 900 </strong>грн.</p>
+
+                        <div class="input-conts">
+                            <div class="wrap-input">
+                                <label for=""></label>
+                                <input type="text" required placeholder="Ваше ім'я*" aria-invalid="">
+                                <span>Це поле є обов'язковим до заповнення</span>
+                            </div>
+                            <div class="wrap-input">
+                                <label for=""></label>
+                                <input type="text" required placeholder="Ваше прізвище*">
+                                <span>Це поле є обов'язковим до заповнення</span>
+                            </div>
+                            <div class="wrap-input">
+                                <label for=""></label>
+                                <input type="email" required placeholder="Email*">
+                                <span>Це поле є обов'язковим до заповнення</span>
+                            </div>
+                            <div class="wrap-input">
+                                <label for=""></label>
+                                <input type="text" required placeholder="Ваш телефон*">
+                                <span>Це поле є обов'язковим до заповнення</span>
+                            </div>
+
                         </div>
                     </div>
                     <div class="right">
-                        <div class="quantity-field">
-                            <div class="quantity__button quantity__button--minus">
-                                <button>-</button>
+                        <div class="checkout-list__item">
+                            <div class="img">
+                                <img class="lazyload" data-src="./img/prod-1.png" alt="">
                             </div>
-                            <div class="quantity">
-                                <label for=""></label>
-                                <input type="number" name="quantity[170]" value="1" min="0" step="1" size="1"
-                                       class="form-control">
+                            <div class="text">
+                                <a href="">Масло моторне ELF 5W-40 Evolution 900 NF 4л ELF0069</a>
+                                <p>X1</p>
+                                <span>1 900 грн.</span>
                             </div>
-                            <div class="quantity__button quantity__button--plus">
-                                <button>+</button>
-                            </div>
-
                         </div>
-
-                        <p class="full-price"><strong>1 900 </strong> грн.</p>
-                        <button class="remove">
-                            <img src="./img/trash-bin.svg" alt="">
-                        </button>
+                        <div class="checkout-list__item">
+                            <div class="img">
+                                <img class="lazyload" data-src="./img/prod-1.png" alt="">
+                            </div>
+                            <div class="text">
+                                <a href="">Масло моторне ELF 5W-40 Evolution 900 NF 4л ELF0069</a>
+                                <p>X1</p>
+                                <span>1 900 грн.</span>
+                            </div>
+                        </div>
+                        <div class="checkout-list__item">
+                            <div class="img">
+                                <img class="lazyload" data-src="./img/prod-1.png" alt="">
+                            </div>
+                            <div class="text">
+                                <a href="">Масло моторне ELF 5W-40 Evolution 900 NF 4л ELF0069</a>
+                                <p>X1</p>
+                                <span>1 900 грн.</span>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-                <div class="checkout-item">
-                    <div class="left">
-                        <div class="img">
-                            <a href="">
-                                <img src="./img/prod-1.png" alt="">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <a href="">Амортизатор пiдвiски газовый Excel-G KYB 338088</a>
-                            <p class="sg-p" data-price="1500"><strong>1 500 </strong>грн.</p>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="quantity-field">
-                            <div class="quantity__button quantity__button--minus">
-                                <button>-</button>
-                            </div>
-                            <div class="quantity">
-                                <label for=""></label>
-                                <input type="number" name="quantity[170]" value="2" min="0" step="1" size="1"
-                                       class="form-control">
-                            </div>
-                            <div class="quantity__button quantity__button--plus">
-                                <button>+</button>
-                            </div>
 
-                        </div>
-
-                        <p class="full-price"><strong>3 000 </strong> грн.</p>
-                        <button class="remove">
-                            <img src="./img/trash-bin.svg" alt="">
-                        </button>
-                    </div>
-
+                <div class="checkout-text">
+                    <span>Термін поставки</span>
+                    <p>Зазначений термін поставки-це планований термін поставки в обраний вами місто. <br>Звертаємо Вашу
+                        увагу,
+                        що на будь-якій стадії виконання замовлення, постачальник може відмовити в постачанні деталі,
+                        зважаючи на її фізичної відсутності на його складі або виявленого браку. Рекомендуємо вам
+                        записуватися на СТО після отримання замовлення в повному обсязі.</p>
+                    <span>Повернення товару</span>
+                    <p>Зверніть увагу, у разі якщо товар вам не підійшов за будь-якими характеристиками, або була
+                        допущена
+                        помилка в підборі (незалежно з чиєї сторони), повернення товару можна зробити протягом 14 днів,
+                        не
+                        рахуючи дня покупки. <br>Товар не повинен мати: слідів установки, наклейок, сторонніх написів,
+                        скотча на
+                        упаковці, пошкоджень упаковки і заводських пломб.</p>
                 </div>
-                <div class="checkout-item">
-                    <div class="left">
-                        <div class="img">
-                            <a href="">
-                                <img src="./img/prod-1.png" alt="">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <a href="">Диск гальмівний TRW MST249</a>
-                            <p class="sg-p" data-price="5850"><strong>5 850 </strong>грн.</p>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="quantity-field">
-                            <div class="quantity__button quantity__button--minus">
-                                <button>-</button>
-                            </div>
-                            <div class="quantity">
-                                <label for=""></label>
-                                <input type="number" name="quantity[170]" value="1" min="0" step="1" size="1"
-                                       class="form-control">
-                            </div>
-                            <div class="quantity__button quantity__button--plus">
-                                <button>+</button>
-                            </div>
 
-                        </div>
 
-                        <p class="full-price"><strong>5 850 </strong> грн.</p>
-                        <button class="remove">
-                            <img src="./img/trash-bin.svg" alt="">
-                        </button>
-                    </div>
+                <div class="delivery-variants">
 
-                </div>
-            </div>
-
-            <div class="delivery-variants">
-                <form action="">
                     <p>Оберіть спосіб доставки</p>
                     <div class="delivery-list">
                         <div class="single-delivery">
@@ -179,27 +152,98 @@
 
                         </div>
                     </div>
-                </form>
-
-            </div>
-
-            <div class="checkout-total">
-                <div class="text">
-                    <ul>
-                        <li>
-                            <span>Доставка:</span>
-                            <p>Безкоштовно</p>
-                        </li>
-                        <li>
-                            <span>Разом:</span>
-                            <p><strong>11 992 грн.</strong></p>
 
 
-                        </li>
-                    </ul>
                 </div>
-                <a href="" class=" btn btn--buy">Оформити замовлення</a>
-            </div>
+
+                <div class="delivery-properties">
+                    <div class="delivery-prop">
+                        <span>Оберіть відділення Нової Пошти:</span>
+                        <div class="delivery-prop__cont">
+                            <div class="delivery-selectors">
+                                <div class="select-default">
+                                    <div class="select-cont">
+                                        <select name="" id="">
+                                            <option value="" selected hidden disabled>Оберіть місто</option>
+                                            <option value="">Київ</option>
+                                            <option value="">Вінниця</option>
+                                            <option value="">Черкаси</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="select-default">
+                                    <div class="select-cont">
+                                        <select name="" id="">
+                                            <option value="" selected hidden disabled>Оберіть відділення</option>
+                                            <option value="">Відділення №124 (до 30 кг)</option>
+                                            <option value="">Відділення №124 (до 30 кг)</option>
+                                            <option value="">Відділення №124 (до 30 кг)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="street">
+                                    <div class="img">
+                                        <img src="./img/pin_drop.svg" alt="">
+                                    </div>
+                                    <p>ул. Вильямса Академика, 5, пом. 200</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="delivery-prop">
+                        <span>Оберіть Спосіб оплати:</span>
+                        <div class="delivery-prop__cont">
+                            <div class="delivery-prop__column">
+                                <div class="radio-block">
+                                    <label for="del4"></label>
+                                    <input type="radio" name="del2" id="del4" checked>
+                                    <span> Картою онлайн</span>
+                                    <div class="img">
+                                        <img src="./img/payment.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="card-details">
+                                    <input type="text" placeholder="Номер картки" class="card-number">
+                                    <input type="text" placeholder="мiсяць/рiк" class="card-month">
+                                    <input type="password" placeholder="CVV" maxlength="3" minlength="3">
+                                </div>
+                            </div>
+                            <div class="delivery-prop__column">
+                                <div class="radio-block">
+                                    <label for="del5"></label>
+                                    <input type="radio" name="del2" id="del5" >
+                                    <span> Оплата у відділенні</span>
+                                    <div class="img">
+                                        <img src="./img/wallet.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-total">
+                    <div class="text">
+                        <ul>
+                            <li>
+                                <span>Доставка:</span>
+                                <p>Безкоштовно</p>
+                            </li>
+                            <li>
+                                <span>Разом:</span>
+                                <p><strong>11 992 грн.</strong></p>
+
+
+                            </li>
+                        </ul>
+                    </div>
+                    <button class=" btn btn--buy btn-mod" data-mod="order">Оформити замовлення</button>
+                </div>
+            </form>
         </div>
     </section>
 

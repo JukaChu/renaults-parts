@@ -208,10 +208,10 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+  width: 9px;
+  height: 9px;
   background: #FAFAFA;
-  display: none;
+  //display: none;
 
 }
 
@@ -239,6 +239,7 @@ h2 {
   line-height: 29px;
   color: $black;
 }
+
 
 
 

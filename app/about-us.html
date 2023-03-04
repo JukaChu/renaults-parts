@@ -16,193 +16,55 @@
 //= details/header.html
 <main>
 
-    <section class="checkout-page">
+
+    <div class="breadcrumbs-cont">
         <div class="container">
-            <a href="" class="get-back">Повернутись до покупок</a>
-
-            <p class="title">Кошик</p>
-
-            <div class="checkout-list">
-                <div class="checkout-item">
-                    <div class="left">
-                        <div class="img">
-                            <a href="">
-                                <img src="./img/prod-1.png" alt="">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <a href="">Масло моторне ELF 5W-40 Evolution 900 NF 4л ELF0069</a>
-                            <p class="sg-p" data-price="1900"><strong>1 900 </strong>грн.</p>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="quantity-field">
-                            <div class="quantity__button quantity__button--minus">
-                                <button>-</button>
-                            </div>
-                            <div class="quantity">
-                                <label for=""></label>
-                                <input type="number" name="quantity[170]" value="1" min="0" step="1" size="1"
-                                       class="form-control">
-                            </div>
-                            <div class="quantity__button quantity__button--plus">
-                                <button>+</button>
-                            </div>
-
-                        </div>
-
-                        <p class="full-price"><strong>1 900 </strong> грн.</p>
-                        <button class="remove">
-                            <img src="./img/trash-bin.svg" alt="">
-                        </button>
-                    </div>
-
-                </div>
-                <div class="checkout-item">
-                    <div class="left">
-                        <div class="img">
-                            <a href="">
-                                <img src="./img/prod-1.png" alt="">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <a href="">Амортизатор пiдвiски газовый Excel-G KYB 338088</a>
-                            <p class="sg-p" data-price="1500"><strong>1 500 </strong>грн.</p>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="quantity-field">
-                            <div class="quantity__button quantity__button--minus">
-                                <button>-</button>
-                            </div>
-                            <div class="quantity">
-                                <label for=""></label>
-                                <input type="number" name="quantity[170]" value="2" min="0" step="1" size="1"
-                                       class="form-control">
-                            </div>
-                            <div class="quantity__button quantity__button--plus">
-                                <button>+</button>
-                            </div>
-
-                        </div>
-
-                        <p class="full-price"><strong>3 000 </strong> грн.</p>
-                        <button class="remove">
-                            <img src="./img/trash-bin.svg" alt="">
-                        </button>
-                    </div>
-
-                </div>
-                <div class="checkout-item">
-                    <div class="left">
-                        <div class="img">
-                            <a href="">
-                                <img src="./img/prod-1.png" alt="">
-                            </a>
-                        </div>
-                        <div class="text">
-                            <a href="">Диск гальмівний TRW MST249</a>
-                            <p class="sg-p" data-price="5850"><strong>5 850 </strong>грн.</p>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="quantity-field">
-                            <div class="quantity__button quantity__button--minus">
-                                <button>-</button>
-                            </div>
-                            <div class="quantity">
-                                <label for=""></label>
-                                <input type="number" name="quantity[170]" value="1" min="0" step="1" size="1"
-                                       class="form-control">
-                            </div>
-                            <div class="quantity__button quantity__button--plus">
-                                <button>+</button>
-                            </div>
-
-                        </div>
-
-                        <p class="full-price"><strong>5 850 </strong> грн.</p>
-                        <button class="remove">
-                            <img src="./img/trash-bin.svg" alt="">
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="delivery-variants">
-                <form action="">
-                    <p>Оберіть спосіб доставки</p>
-                    <div class="delivery-list">
-                        <div class="single-delivery">
-                            <div class="radio-block">
-                                <label for="del1"></label>
-                                <input type="radio" name="del" id="del1" checked>
-                                <span> Самовивіз</span>
-                            </div>
-                            <div class="deliv-text">
-
-
-                                <div class="img">
-                                    <img src="./img/pin_drop.svg" alt="">
-                                </div>
-                                <p>Самовивіз з представництва безкоштовно. <br>Київ, Голосієво, Васильківська 16</p>
-                            </div>
-
-                        </div>
-                        <div class="single-delivery">
-                            <div class="radio-block">
-                                <label for="del2"></label>
-                                <input type="radio" name="del" id="del2">
-                                <span> Нова пошта</span>
-                            </div>
-                            <div class="deliv-text">
-                                <div class="img">
-                                </div>
-                                <p>Доставка здійснюється <br>за тарифами Нової Пошти.</p>
-                            </div>
-
-                        </div>
-                        <div class="single-delivery">
-                            <div class="radio-block">
-                                <label for="del3"></label>
-                                <input type="radio" name="del" id="del3">
-                                <span> Укрпошта</span>
-                            </div>
-                            <div class="deliv-text">
-
-
-                                <div class="img">
-                                </div>
-                                <p>Доставка здійснюється <br>за тарифами Укрпошти.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-
-            <div class="checkout-total">
-                <div class="text">
-                    <ul>
-                        <li>
-                            <span>Доставка:</span>
-                            <p>Безкоштовно</p>
-                        </li>
-                        <li>
-                            <span>Разом:</span>
-                            <p><strong>11 992 грн.</strong></p>
-
-
-                        </li>
-                    </ul>
-                </div>
-                <a href="" class=" btn btn--buy">Оформити замовлення</a>
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="">Головна</a></li>
+                    <li><span>Про нас</span></li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
 
+    <section class="article">
+        <div class="container">
+            <div class="article-cont">
+                <h1>Про нас</h1>
+
+
+                <p>Suscipit ultricies tincidunt nisi consequat purus viverra. Dui nulla libero elementum sapien. Tellus
+                    vivamus massa ut aenean sit felis cum risus faucibus. Lacinia nam id at pretium scelerisque in odio
+                    magna aliquam. Viverra dis commodo amet montes gravida. Rhoncus egestas nulla elit sed lacinia
+                    scelerisque erat leo convallis. Eget leo pharetra sagittis lacus iaculis scelerisque. Lorem
+                    malesuada quam fringilla sed magna. Et nulla auctor commodo et. Quis fermentum pellentesque leo
+                    viverra nam vehicula. At enim enim cursus et aliquet vestibulum eget. Arcu et placerat cursus
+                    pharetra et. Leo nunc amet amet duis. At urna dictum arcu feugiat vulputate cum <a href="">odio
+                        nullam</a>
+                    maecenas.</p>
+
+                <h2>Dapibus ut adipiscing pretium nisl</h2>
+                <p>Massa amet enim vitae lectus molestie habitant posuere. <a href="https://google.com">Blandit
+                    aenean</a> viverra sem sed tristique
+                    enim a tortor volutpat. Eget suscipit sagittis malesuada id eu aliquet nisl eu scelerisque. Risus
+                    aenean nisl eu ullamcorper fames in enim urna. Nunc id adipiscing felis nibh. Aliquam ornare
+                    sollicitudin duis nibh. Nisl dignissim ultrices nulla pellentesque nunc diam nisi. Odio a augue
+                    feugiat faucibus urna amet viverra fames aenean. Rhoncus nibh viverra fermentum sapien diam duis. Et
+                    proin sit ipsum eleifend. Nulla gravida nibh id aliquet. Sit risus lorem nec praesent nam metus
+                    magna commodo.</p>
+                <p>In duis orci eget nulla massa suspendisse dictum. Dapibus ut adipiscing pretium nisl. Bibendum
+                    sollicitudin faucibus vel duis adipiscing adipiscing cursus urna. Fermentum risus urna mattis
+                    vulputate et. Egestas suspendisse mauris convallis sodales diam faucibus eget. Ornare risus
+                    venenatis amet lacus etiam. Amet adipiscing lacus convallis vitae et.</p>
+                <p>Lorem neque dignissim quis quam egestas tellus. At aliquam magnis malesuada aliquet a morbi
+                    tincidunt cursus fusce. Sit suspendisse at eu suscipit molestie volutpat. Ornare enim scelerisque
+                    non elit viverra vel vitae non. Dui gravida odio augue id aenean at mus fringilla.</p>
+
+            </div>
+
+        </div>
+    </section>
     <section class="products-group ">
         <div class="container">
             <div class="products-group__head">
@@ -304,7 +166,6 @@
         </div>
 
     </section>
-
     <section class="news-section">
         <div class="container">
             <div class="products-group__head">

@@ -182,11 +182,152 @@
 
                         <p class="full-price"><strong>1 900 </strong> грн.</p>
                         <button class="remove">
-
+                            <img src="./img/trash-bin.svg" alt="">
                         </button>
                     </div>
 
                 </div>
+                <div class="checkout-item">
+                    <div class="left">
+                        <div class="img">
+                            <a href="">
+                                <img src="./img/prod-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a href="">Амортизатор пiдвiски газовый Excel-G KYB 338088</a>
+                            <p class="sg-p" data-price="1500"><strong>1 500 </strong>грн.</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="quantity-field">
+                            <div class="quantity__button quantity__button--minus">
+                                <button>-</button>
+                            </div>
+                            <div class="quantity">
+                                <label for=""></label>
+                                <input type="number" name="quantity[170]" value="2" min="0" step="1" size="1"
+                                       class="form-control">
+                            </div>
+                            <div class="quantity__button quantity__button--plus">
+                                <button>+</button>
+                            </div>
+
+                        </div>
+
+                        <p class="full-price"><strong>3 000 </strong> грн.</p>
+                        <button class="remove">
+                            <img src="./img/trash-bin.svg" alt="">
+                        </button>
+                    </div>
+
+                </div>
+                <div class="checkout-item">
+                    <div class="left">
+                        <div class="img">
+                            <a href="">
+                                <img src="./img/prod-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <a href="">Диск гальмівний TRW MST249</a>
+                            <p class="sg-p" data-price="5850"><strong>5 850 </strong>грн.</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="quantity-field">
+                            <div class="quantity__button quantity__button--minus">
+                                <button>-</button>
+                            </div>
+                            <div class="quantity">
+                                <label for=""></label>
+                                <input type="number" name="quantity[170]" value="1" min="0" step="1" size="1"
+                                       class="form-control">
+                            </div>
+                            <div class="quantity__button quantity__button--plus">
+                                <button>+</button>
+                            </div>
+
+                        </div>
+
+                        <p class="full-price"><strong>5 850 </strong> грн.</p>
+                        <button class="remove">
+                            <img src="./img/trash-bin.svg" alt="">
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="delivery-variants">
+                <form action="">
+                    <p>Оберіть спосіб доставки</p>
+                    <div class="delivery-list">
+                        <div class="single-delivery">
+                            <div class="radio-block">
+                                <label for="del1"></label>
+                                <input type="radio" name="del" id="del1" checked>
+                                <span> Самовивіз</span>
+                            </div>
+                            <div class="deliv-text">
+
+
+                                <div class="img">
+                                    <img src="./img/pin_drop.svg" alt="">
+                                </div>
+                                <p>Самовивіз з представництва безкоштовно. <br>Київ, Голосієво, Васильківська 16</p>
+                            </div>
+
+                        </div>
+                        <div class="single-delivery">
+                            <div class="radio-block">
+                                <label for="del2"></label>
+                                <input type="radio" name="del" id="del2">
+                                <span> Нова пошта</span>
+                            </div>
+                            <div class="deliv-text">
+                                <div class="img">
+                                </div>
+                                <p>Доставка здійснюється <br>за тарифами Нової Пошти.</p>
+                            </div>
+
+                        </div>
+                        <div class="single-delivery">
+                            <div class="radio-block">
+                                <label for="del3"></label>
+                                <input type="radio" name="del" id="del3">
+                                <span> Укрпошта</span>
+                            </div>
+                            <div class="deliv-text">
+
+
+                                <div class="img">
+                                </div>
+                                <p>Доставка здійснюється <br>за тарифами Укрпошти.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="checkout-total">
+                <div class="text">
+                    <ul>
+                        <li>
+                            <span>Доставка:</span>
+                            <p>Безкоштовно</p>
+                        </li>
+                        <li>
+                            <span>Разом:</span>
+                            <p><strong>11 992 грн.</strong></p>
+
+
+                        </li>
+                    </ul>
+                </div>
+                <a href="" class=" btn btn--buy">Оформити замовлення</a>
             </div>
         </div>
     </section>
@@ -580,6 +721,35 @@
         </div>
     </div>
 </div>
+
+<div class="modal-window" data-modal="order">
+    <div class="backplate">
+
+    </div>
+    <div class="modal-container">
+        <div class="modal-head">
+            <p>Дякуємо Вам за виявлену довіру</p>
+            <div class="modal-close">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="modal-cont">
+
+            <div class="cart-modal">
+                <p>Товар буде відправлений найближчим часом.</p>
+
+                <div class="cart-modal-links">
+                    <a href="" class="to-main">назад до магазину</a>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
 <script
@@ -591,6 +761,7 @@
 
 <script type="text/javascript"  src="./libs/jquery.nice-select.min.js"></script>
 <script type="text/javascript"  src="./libs/jquery.raty.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
 <script type="text/javascript" class="main-script" src="./js/scripts.min.js"></script>
 
 </body>

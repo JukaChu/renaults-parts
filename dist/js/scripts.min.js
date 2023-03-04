@@ -36,7 +36,7 @@ catalogControl();
 
 //custom select
 
-$(document).ready(function() {
+$(document).ready(function () {
     if (document.querySelector('.select-cont select')) {
         $('.select-cont select').niceSelect();
     }
@@ -188,7 +188,6 @@ burgerControl();
 //chars hovering
 
 
-
 let productsGroup = [...document.querySelectorAll('.products-group')];
 
 function startProductGroup() {
@@ -229,7 +228,6 @@ function startProductGroup() {
                         spaceBetween: 20,
                     },
                 }
-
 
 
             });
@@ -283,7 +281,6 @@ function startNewsGroup() {
                         spaceBetween: 20,
                     },
                 }
-
 
 
             });
@@ -455,32 +452,55 @@ function upValueQuant() {
         quantButton.forEach((btn) => {
             btn.querySelector('button').addEventListener('click', () => {
                 if (btn.classList.contains('quantity__button--minus')) {
-                    let val =  btn.closest('.quantity-field').querySelector('.quantity input').value;
+                    let val = btn.closest('.quantity-field').querySelector('.quantity input').value;
                     if (Number(val) === 0) {
 
                     } else {
-                        let newVal =    Number(val) - 1;
+                        let newVal = Number(val) - 1;
                         btn.closest('.quantity-field').querySelector('.quantity input').value = newVal;
+
+                        if (btn.closest('.checkout-item')) {
+                            let price = btn.closest('.checkout-item').querySelector('.sg-p').dataset.price;
+                            let fullPrice = btn.closest('.checkout-item').querySelector('.full-price strong');
+
+                            let prc = btn.closest('.quantity-field').querySelector('.quantity input').value * price;
+
+                            let dottedPrice = prc.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                            fullPrice.innerHTML = dottedPrice;
+                        }
                     }
 
 
                 } else {
-                    let val =  btn.closest('.quantity-field').querySelector('.quantity input').value;
+                    let val = btn.closest('.quantity-field').querySelector('.quantity input').value;
 
-                    let newVal =    Number(val) + 1;
+                    let newVal = Number(val) + 1;
                     btn.closest('.quantity-field').querySelector('.quantity input').value = newVal;
+                    if (btn.closest('.checkout-item')) {
+                        let price = btn.closest('.checkout-item').querySelector('.sg-p').dataset.price;
+                        let fullPrice = btn.closest('.checkout-item').querySelector('.full-price strong');
 
+                        let prc = btn.closest('.quantity-field').querySelector('.quantity input').value * price;
+
+                        let dottedPrice = prc.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                        fullPrice.innerHTML = dottedPrice;
+                    }
                 }
             })
         })
     }
 }
+
 upValueQuant();
 
+//price change
+
+
+//price change
 
 function getRaty() {
-    $('.rating-stars').each(function( index ) {
-        if($(this).html() == '') {
+    $('.rating-stars').each(function (index) {
+        if ($(this).html() == '') {
             $(this).raty({
                 readOnly: true,
                 starHalf: './img/star-full.svg',
@@ -548,6 +568,7 @@ function controlProdDesc() {
         })
     }
 }
+
 controlProdDesc();
 //product-description
 
@@ -605,6 +626,28 @@ function controlFaq() {
 controlFaq();
 
 //faq
+
+//card script
+
+let cardDetails = [...document.querySelectorAll('.card-details')];
+
+function cardFunc() {
+    if (cardDetails.length) {
+        var cleave = new Cleave('.card-number', {
+            creditCard: true,
+            onCreditCardTypeChanged: function (type) {
+            }
+        });
+        var cleave2 = new Cleave('.card-month', {
+            date: true,
+            datePattern: ['m', 'y']
+        });
+
+    }
+}
+
+cardFunc();
+//card script
 
 
 
