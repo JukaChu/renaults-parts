@@ -333,7 +333,6 @@ function startGallery() {
                 },
 
 
-
             });
 
 
@@ -648,6 +647,167 @@ function cardFunc() {
 
 cardFunc();
 //card script
+
+
+$('.phone-number').mask('+38 (999) - 999 - 99 - 99');
+
+
+//range sliders
+
+
+var inputsRange = [...document.querySelectorAll('.filter-range-inputs input')];
+let stepsSlider = document.querySelector('.range-slider');
+let btnAccept = document.querySelector('.btn-accept-range');
+
+
+function createRangeSlider() {
+    if (stepsSlider) {
+        let st = stepsSlider.dataset.start;
+        let nd = stepsSlider.dataset.end;
+        let mn = stepsSlider.dataset.min;
+        let mx = stepsSlider.dataset.max;
+
+
+        noUiSlider.create(stepsSlider, {
+            start: [Number(st), Number(nd)],
+            connect: true,
+            tooltips: false,
+            format: wNumb({
+                decimals: 0,
+            }),
+            range: {
+                'min': [Number(mn)],
+
+                'max': Number(mx)
+            }
+        });
+
+        stepsSlider.noUiSlider.on('update', function (values, handle) {
+            inputsRange[handle].value = values[handle];
+        });
+
+
+        inputsRange.forEach(function (input, handle) {
+
+            input.addEventListener('change', function () {
+                stepsSlider.noUiSlider.setHandle(handle, this.value);
+            });
+
+            btnAccept.addEventListener('click', () => {
+                stepsSlider.noUiSlider.setHandle(handle, this.value);
+            });
+
+            input.addEventListener('keydown', function (e) {
+
+                var values = stepsSlider.noUiSlider.get();
+                var value = Number(values[handle]);
+
+                // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+                var steps = stepsSlider.noUiSlider.steps();
+
+                // [down, up]
+                var step = steps[handle];
+
+                var position;
+
+                // 13 is enter,
+                // 38 is key up,
+                // 40 is key down.
+
+
+                switch (e.which) {
+
+                    case 13:
+                        stepsSlider.noUiSlider.setHandle(handle, this.value);
+                        break;
+
+                    case 38:
+
+                        // Get step to go increase slider value (up)
+                        position = step[1];
+
+                        // false = no step is set
+                        if (position === false) {
+                            position = 1;
+                        }
+
+                        // null = edge of slider
+                        if (position !== null) {
+                            stepsSlider.noUiSlider.setHandle(handle, value + position);
+                        }
+
+                        break;
+
+                    case 40:
+
+                        position = step[0];
+
+                        if (position === false) {
+                            position = 1;
+                        }
+
+                        if (position !== null) {
+                            stepsSlider.noUiSlider.setHandle(handle, value - position);
+                        }
+
+                        break;
+                }
+            });
+        });
+    }
+}
+
+createRangeSlider();
+
+
+//range sliders
+
+//toggling
+
+let togglingSpan = [...document.querySelectorAll('.toggling > span')];
+
+function toggleVis() {
+    if (togglingSpan.length) {
+        togglingSpan.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.toggling').classList.toggle('open');
+            })
+        })
+    }
+}
+
+toggleVis();
+//toggling
+
+//filter control
+
+let filterOpener = [...document.querySelectorAll('.filter-opener')];
+
+function controlingOpeningFilter() {
+    if (filterOpener.length) {
+        let filt = document.querySelector('.filter-container');
+
+        filterOpener.forEach((btn) => {
+
+            if (window.innerWidth < 920) {
+                btn.addEventListener('click', () => {
+                    filt.classList.toggle('open');
+                    document.body.classList.toggle('filter-open');
+                    document.body.classList.toggle('no-scroll');
+                });
+            }
+
+        });
+        filt.querySelector('.cls').addEventListener('click', () => {
+            filt.classList.remove('open');
+            document.body.classList.remove('filter-open');
+            document.body.classList.remove('no-scroll');
+        })
+    }
+}
+
+controlingOpeningFilter();
+//filter control
 
 
 
