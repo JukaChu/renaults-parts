@@ -1521,6 +1521,8 @@
   opacity: 0;
   transition: opacity 0.4s ease;
   transition-delay: 0s !important;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 
 .modal-head {
@@ -1767,7 +1769,7 @@
     font-family: $second-font;
     display: none;
   }
-  .btn--buy {
+  .btn--buy[disabled] {
     pointer-events: none;
     filter: brightness(0.2) invert(0.7);
   }
@@ -1800,8 +1802,7 @@
   }
 
   .available {
-    margin-top: 30px;
-    margin-bottom: 30px;
+
 
     p {
       font-style: normal;
@@ -1837,6 +1838,24 @@
           background: #ff3d00;
         }
       }
+    }
+  }
+}
+.product-available {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .code {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: #000000;
+    strong {
+      font-weight: 600;
     }
   }
 }
