@@ -1954,6 +1954,7 @@ body .footer-bot .footer-doc-menu li a {
 body .footer-bot .footer-doc-menu li a:hover {
   opacity: 1;
 }
+
 @media screen and (max-width: 850px) {
   .footer-top {
     margin-bottom: 30px;
@@ -1963,6 +1964,7 @@ body .footer-bot .footer-doc-menu li a:hover {
     gap: 20px;
   }
 }
+
 @media screen and (max-width: 525px) {
   body .footer-bot .footer-doc-menu {
     margin-left: 0;
@@ -1971,5 +1973,10 @@ body .footer-bot .footer-doc-menu li a:hover {
     align-items: center;
     justify-content: flex-start;
 
+  }
+  .modal-head .modal-close {
+    right: 5px;
+    top: 5px;
+    transform: translate(0, 0);
   }
 }

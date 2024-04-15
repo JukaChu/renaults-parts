@@ -1,3 +1,5 @@
+const MODAL_OPEN_CLASS = 'visible';
+
 var allLazyLoad = [...document.querySelectorAll('.lazyload')];
 
 function allLozadImg() {

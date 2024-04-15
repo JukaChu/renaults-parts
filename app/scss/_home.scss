@@ -5043,8 +5043,25 @@ input[type=number] {
     }
   }
   .product-available .btn-lower {
-    display: none;
+    //display: none;
+    width: 100%;
+    padding: 7px 10px;
+    background: rgba(255, 255, 255, 0);
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    border: 4px solid #BFC8D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+    height: 54px;
+
+    &:hover {
+      background: #BFC8D0;
+    }
   }
+
   .product-available .code {
     margin-top: 0 !important;
   }
@@ -5067,6 +5084,16 @@ input[type=number] {
   .to-cart {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .modal-window .form form .btn {
+    width: 100%;
+  }
+  .modal-install .to-cart {
+    width: 100%;
+  }
+
 }
 
 @import "media";
